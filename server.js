@@ -13,6 +13,8 @@ app.post('/alexa', function (req, res, next) {
 
     socket = dgram.createSocket('udp4')
     socket.send("", cecport, cecip, function (err) {
+        if (err) { return next(err) }
+        console.log("Sent datagram.")
         socket.close()
     })
 
