@@ -21,6 +21,7 @@ app.post('/theatermode', function (req, res, next) {
     console.log(req.body)
 
     if (isValidRequest(req.body)) {
+        console.log("valid request")
         res.status(200).json({
             version: "1.0",
             response: {
@@ -43,7 +44,8 @@ app.post('/theatermode', function (req, res, next) {
         })
     }
     else {
-        res.status(401)
+        console.log("NOT a valid request")
+        res.status(401).end()
     }
 })
 

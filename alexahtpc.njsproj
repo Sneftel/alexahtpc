@@ -7,6 +7,7 @@
     <RootNamespace>alexahtpc</RootNamespace>
     <Environment>CUSTOMCONNSTR_cecip=8.8.8.8
 CUSTOMCONNSTR_cecport=31313
+ALEXA_APPLICATION_ID=amzn1.ask.skill.5cf54028-ae18-49af-9460-ad9cf19787af
 </Environment>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
