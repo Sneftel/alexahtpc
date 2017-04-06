@@ -34,7 +34,7 @@ app.post('/theatermode', function (req, res, next) {
         })
 
         socket = dgram.createSocket('udp4')
-        socket.send("\x05\x44\x6d", cecport, cecip, function (err) {
+        socket.send("TM", cecport, cecip, function (err) {
             if (err) {
                 console.log("Error when sending datagram:", err)
                 return next(err)
