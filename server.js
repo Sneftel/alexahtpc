@@ -49,6 +49,19 @@ app.post('/theatermode', function (req, res, next) {
     }
 })
 
+app.post('/fiona', function (req, res, next) {
+    res.status(200).json({
+        version: "1.0",
+        response: {
+            outputSpeech: {
+                type: "PlainText",
+                text: "yes, he is."
+            },
+            shouldEndSession: true
+        }
+    })
+})
+
 app.listen(process.env.port || 3434, function () {
     console.log('Server listening on port', process.env.port || 3434)
 })
